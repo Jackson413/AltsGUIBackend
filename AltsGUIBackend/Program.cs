@@ -10,6 +10,7 @@ namespace AltsGUIBackend
     {
         static void Main(string[] args)
         {
+            //test
         }
     }
 }
