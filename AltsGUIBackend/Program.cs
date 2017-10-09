@@ -53,7 +53,7 @@ namespace AltsGUIBackend
             Console.WriteLine("\n\n\t\t\tPress <Enter> to Begin");
             Console.ReadLine();
             Process myProcess = new Process();
-            for(int i = 0; i < accountAll.Count(); i++)
+            for(int i = 0; i < 1; i++)
             {
                 myProcess.StartInfo.FileName = "C:\\windows\\system32\\cmd.exe";
                 myProcess.Start();
