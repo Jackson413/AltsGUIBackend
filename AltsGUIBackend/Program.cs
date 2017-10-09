@@ -17,6 +17,7 @@ namespace AltsGUIBackend
             string[] accountLines = { };
             string[] accountPrimary = { };
             string[] accountSecondary = { };
+            //This is a test.
             if (File.Exists(path))
             {
                 accountInput = File.ReadAllText(path);
