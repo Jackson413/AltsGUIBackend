@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Diagnostics;
+using System.ComponentModel;
 
 namespace AltsGUIBackend
 {
@@ -13,11 +14,17 @@ namespace AltsGUIBackend
         public void OpenWindows()
         {
             Process myProcess = new Process();
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < Accounts.accountAll.Length; i++)
             {
-                myProcess.StartInfo.FileName = "C:\\windows\\system32\\cmd.exe";
-                myProcess.Start();
+                int j = i + 1;
+                System.Diagnostics.Process process = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                startInfo.FileName = "CMD.exe";
+                startInfo.Arguments = "/K cd C:\\users\\Jackson\\Desktop\\ConsoleClient & MinecraftClient.exe " + j + "_" + Accounts.accountAll[i] + ".ini";
+                Console.WriteLine("/K C:\\users\\Jackson\\Desktop\\ConsoleClient\\MinecraftClient.exe " + j + "_" + Accounts.accountAll[i] + ".ini");
+                process.StartInfo = startInfo;
+                process.Start();
             }
         }
-}
+    }
 }
