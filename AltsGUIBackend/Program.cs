@@ -15,14 +15,9 @@ namespace AltsGUIBackend
         {
             Accounts accounts = new Accounts();
             Messaging messaging = new Messaging();
+            ProcessHandler processhandler = new ProcessHandler();
             accounts.FileCheck();
             messaging.WelcomeMessage();
-            Process myProcess = new Process();
-            for(int i = 0; i < 1; i++)
-            {
-                myProcess.StartInfo.FileName = "C:\\windows\\system32\\cmd.exe";
-                myProcess.Start();
-            }
             Console.ReadLine();
         }
     }
