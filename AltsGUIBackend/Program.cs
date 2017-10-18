@@ -18,6 +18,7 @@ namespace AltsGUIBackend
             ProcessHandler processhandler = new ProcessHandler();
             accounts.FileCheck();
             messaging.WelcomeMessage();
+            processhandler.OpenWindows();
             Console.ReadLine();
         }
     }

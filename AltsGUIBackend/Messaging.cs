@@ -10,26 +10,21 @@ namespace AltsGUIBackend
     {
         public void WelcomeMessage()
         {
-            Accounts acc = new Accounts();
-            acc.GetAccounts();
-            string[] accountPrimary = acc.accountPrimary;
-            string[] accountSecondary = acc.accountSecondary;
-            string[] accountAll = acc.accountAll;
             Console.WriteLine("\t\t\t413 AltsGUI Initialization\n");
-            Console.WriteLine("{0} Total Accounts in {1}:\n", accountAll.Count(), Program.path);
-            for (int i = 0; i < accountAll.Length; i++)
+            Console.WriteLine("{0} Total Accounts in {1}:\n", Accounts.accountAll.Count(), Program.path);
+            for (int i = 0; i < Accounts.accountAll.Length; i++)
             {
-                Console.WriteLine(accountAll[i]);
+                Console.WriteLine(Accounts.accountAll[i]);
             }
             Console.WriteLine("\nGroup One Accounts:");
-            for (int i = 0; i < accountPrimary.Length; i++)
+            for (int i = 0; i < Accounts.accountPrimary.Length; i++)
             {
-                Console.Write("\t" + accountPrimary[i]);
+                Console.Write("\t" + Accounts.accountPrimary[i]);
             }
             Console.WriteLine("\n\nGroup Two Accounts:");
-            for (int i = 0; i < accountSecondary.Length; i++)
+            for (int i = 0; i < Accounts.accountSecondary.Length; i++)
             {
-                Console.Write("\t" + accountSecondary[i]);
+                Console.Write("\t" + Accounts.accountSecondary[i]);
             }
             Console.WriteLine("\n\n\t\t\tPress <Enter> to Begin");
         }
