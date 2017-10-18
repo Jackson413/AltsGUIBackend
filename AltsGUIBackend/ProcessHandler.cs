@@ -17,6 +17,7 @@ namespace AltsGUIBackend
             {
                 myProcess.StartInfo.FileName = "C:\\windows\\system32\\cmd.exe";
                 myProcess.Start();
+                Console.ReadLine();
             }
         }
 }
