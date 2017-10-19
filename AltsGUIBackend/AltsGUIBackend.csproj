@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accounts.cs" />
+    <Compile Include="ErrorHandling.cs" />
     <Compile Include="HeightCalculation.cs" />
     <Compile Include="Messaging.cs" />
     <Compile Include="ProcessHandler.cs" />

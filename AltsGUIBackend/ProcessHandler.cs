@@ -53,22 +53,22 @@ namespace AltsGUIBackend
                 System.Diagnostics.Process process = new System.Diagnostics.Process();
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                 startInfo.FileName = "CMD.exe";
-                //startInfo.Arguments = "/K cd C:\\users\\Jackson\\Desktop\\ConsoleClient & MinecraftClient.exe " + j + "_" + Accounts.accountAll[i] + ".ini";
-                startInfo.Arguments = "/K title " + Accounts.accountAll[i] + "&timeout " + 5 * i + " > nul" + "& cd " + Program.consoleClientPath + j + "_" + Accounts.accountAll[i] + ".ini";
+                //startInfo.Arguments = "/K title " + Accounts.accountAll[i] + "&timeout " + 5 * i + " > nul" + "& cd " + Program.consoleClientPath + j + "_" + Accounts.accountAll[i] + ".ini";
+                startInfo.Arguments = "/K title " + Accounts.accountAll[i];
+
                 process.StartInfo = startInfo;
                 process.Start();
                 Thread.Sleep(250);
-                //                                                  Loc X  Y    W    H
                 //The world's most messy code
                 double heightCalcLeft = (HeightCalculation.WorkableHeight() / leftColumnAccounts);
                 double leftRound = (double)Math.Ceiling(heightCalcLeft / 5) * 5;
                 int leftRoundInt = Convert.ToInt32(leftRound);
                 if (i < leftColumnAccounts) //Left Column
                 {
-                    ProcessHandler.MoveWindow(process.MainWindowHandle, -3840, i * HeightCalculation.WorkableHeight() / leftColumnAccounts, 669, leftRoundInt, true);
+                    ProcessHandler.MoveWindow(process.MainWindowHandle, Program.monitorTweak, i * HeightCalculation.WorkableHeight() / leftColumnAccounts, 669, leftRoundInt, true);
                 }
                 else //                     Right Column
-                    ProcessHandler.MoveWindow(process.MainWindowHandle, -3171, (i - leftColumnAccountsList.Count()) * HeightCalculation.WorkableHeight() / rightColumnAccounts, 669, HeightCalculation.WorkableHeight() / rightColumnAccounts, true);
+                    ProcessHandler.MoveWindow(process.MainWindowHandle, Program.monitorTweak + 669, (i - leftColumnAccountsList.Count()) * HeightCalculation.WorkableHeight() / rightColumnAccounts, 669, HeightCalculation.WorkableHeight() / rightColumnAccounts, true);
             }
         }
     }
