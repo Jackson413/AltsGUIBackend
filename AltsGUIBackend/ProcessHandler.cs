@@ -46,7 +46,7 @@ namespace AltsGUIBackend
                 //Console.WriteLine(Accounts.accountAll[i + (leftColumnAccounts)]);
                 rightColumnAccountsList.Add(Accounts.accountAll[i + (leftColumnAccounts)]); //Adding window grouping for right side column
             }
-            Process myProcess = new Process();
+            Process myProcess = new Process();//Actual Starting of Programs
             for (int i = 0; i < Accounts.accountAll.Length; i++)
             {
                 int j = i + 1;
@@ -54,7 +54,7 @@ namespace AltsGUIBackend
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                 startInfo.FileName = "CMD.exe";
                 //startInfo.Arguments = "/K cd C:\\users\\Jackson\\Desktop\\ConsoleClient & MinecraftClient.exe " + j + "_" + Accounts.accountAll[i] + ".ini";
-                startInfo.Arguments = "/K title " + Accounts.accountAll[i] + "&timeout " + 5 * j + " > nul" + "& cd C:\\users\\Jackson\\Desktop\\ConsoleClient & MinecraftClient.exe " + j + "_" + Accounts.accountAll[i] + ".ini";
+                startInfo.Arguments = "/K title " + Accounts.accountAll[i] + "&timeout " + 5 * i + " > nul" + "& cd " + Program.consoleClientPath + j + "_" + Accounts.accountAll[i] + ".ini";
                 process.StartInfo = startInfo;
                 process.Start();
                 Thread.Sleep(250);

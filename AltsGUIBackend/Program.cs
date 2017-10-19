@@ -11,6 +11,7 @@ namespace AltsGUIBackend
     class Program
     {
         public static string path = @"accounts.txt";
+        public static string consoleClientPath = "C:\\users\\Jackson\\Desktop\\ConsoleClient & MinecraftClient.exe ";
         static void Main(string[] args)
         {
             Accounts accounts = new Accounts();
