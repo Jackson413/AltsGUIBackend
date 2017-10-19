@@ -11,7 +11,7 @@ namespace AltsGUIBackend
         public void WelcomeMessage()
         {
             Console.WriteLine("\t\t\t413 AltsGUI Initialization\n");
-            Console.WriteLine("{0} Total Accounts in {1}:\n", Accounts.accountAll.Count(), Program.path);
+            Console.WriteLine("{0} Total Accounts in {1}:\n", Accounts.accountTotalNumber, Program.path);
             for (int i = 0; i < Accounts.accountAll.Length; i++)
             {
                 Console.WriteLine(Accounts.accountAll[i]);

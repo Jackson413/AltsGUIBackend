@@ -15,6 +15,7 @@ namespace AltsGUIBackend
         public static string[] accountPrimary = accountLines[0].Split(' '); //Forming Primary
         public static string[] accountSecondary = accountLines[1].Split(' '); //Forming Secondary
         public static string[] accountAll = new string[accountPrimary.Length + accountSecondary.Length]; //Declaring All
+        public static int accountTotalNumber = accountAll.Count();
         public void FileCheck() //Here is the method for checking if the accounts file exists. If it does not, the program will display an error and exit.
         {
             if (!File.Exists(Program.path))
